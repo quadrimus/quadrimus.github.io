@@ -102,6 +102,7 @@ nav a:nth-child(even):hover {
 
 main {
 	margin: auto;
+	min-height: calc(100vh - 10em);
 	position: relative;
 	width: 70em;
 }
