@@ -28,14 +28,13 @@ body {
 
 header {
 	background: linear-gradient(0deg, var(--border-color), var(--background-color) 0.2em);
-	display: flex;
-	gap: 0.5em;
+	min-height: 4.2em;
 }
 
 svg.logo {
 	display: inline-block;
 	height: 3em;
-	margin: 0.5em 0;
+	margin: -0.5em 0.2em 0 0;
 	min-width: 3em;
 }
 
@@ -46,15 +45,17 @@ svg.logo path {
 
 h1 {
 	display: inline-block;
+	float: left;
 	font-size: 1em;
 	margin: 1em 0 0 0;
-	min-width: 14em;
+	min-width: 18em;
 	position: relative;
 }
 
 h1 > .team {
 	color: var(--grey-text-color);
 	display: block;
+	left: 3.5em;
 	top: -0.8em;
 	position: absolute;
 	z-index: 2;
@@ -63,16 +64,35 @@ h1 > .team {
 h1 > .dark {
 	color: var(--orange);
 	font-size: 2em;
+	vertical-align: top;
 }
 
 h1 > .pink {
 	color: var(--pink);
 	font-size: 2em;
+	vertical-align: top;
 }
 
 h1 > .ema {
 	color: var(--grey-text-color);
 	font-size: 2em;
+	vertical-align: top;
+}
+
+header .menu {
+	cursor: pointer;
+	font-size: 2em;
+	line-height: 2em;
+	margin-left: auto;
+	min-width: 2em;
+	text-align: center;
+}
+
+header .menu::before {
+	content: '☰';
+}
+header .menu:hover {
+	background-color: var(--pink);
 }
 
 nav {
@@ -99,6 +119,32 @@ nav a:hover {
 
 nav a:nth-child(even):hover {
 	background-color: var(--orange);
+}
+
+@media screen and (max-width: 850px) {
+	header .menu {
+		display: inline-block !important;
+		float: right;
+	}
+
+	nav {
+		display: none;
+	}
+
+	nav.opened {
+		clear: both;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+
+	nav a {
+		text-align: center;
+	}
+
+	nav a:last-child {
+		margin-left: 0;
+	}
 }
 
 main {
