@@ -118,6 +118,12 @@ nav a:last-child {
 	margin-left: auto;
 }
 
+nav a:last-child::after {
+	content: '⇨';
+	margin-left: 0.2em;
+	vertical-align: top;
+}
+
 nav a:hover {
 	background-color: var(--pink);
 }
