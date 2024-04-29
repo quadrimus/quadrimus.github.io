@@ -154,7 +154,9 @@ nav a:nth-child(even):hover {
 	}
 
 	nav a {
-		text-align: center;
+		justify-content: center;
+		padding: 0;
+		width: 100%;
 	}
 
 	nav a:last-child {
