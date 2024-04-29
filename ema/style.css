@@ -1,4 +1,4 @@
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 100em) {
 	header {
 		padding: 0 4em;
 	}
@@ -23,7 +23,10 @@
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	margin: 0;
+	min-height: 100vh;
 }
 
 header {
@@ -121,7 +124,7 @@ nav a:nth-child(even):hover {
 	background-color: var(--orange);
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 55em) {
 	header .menu {
 		display: inline-block !important;
 		float: right;
@@ -145,14 +148,19 @@ nav a:nth-child(even):hover {
 	nav a:last-child {
 		margin-left: 0;
 	}
+
+	section.blocks {
+		flex-direction: column;
+	}
 }
 
 main {
+	flex-grow: 1;
 	margin: auto;
 	max-width: 70em;
-	min-height: calc(100vh - 10em);
 	min-width: 20em;
 	position: relative;
+	padding-bottom: 2em;
 }
 
 h2 {
@@ -349,6 +357,7 @@ footer {
 	font-weight: bold;
 	margin: auto;
 	padding: 0.5em 0 1em 0;
+	width: 100%;
 }
 
 footer p {
