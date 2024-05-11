@@ -78,11 +78,6 @@ h1 > .pink {
 	vertical-align: top;
 }
 
-h1 > .pink > span {
-	color: var(--grey-text-color);
-	margin-left: -0.25em;
-}
-
 h1 > .ema {
 	color: var(--grey-text-color);
 	font-size: 2em;
