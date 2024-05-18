@@ -186,6 +186,31 @@ nav a.active::before {
 	section.blocks {
 		flex-direction: column;
 	}
+
+	section.conversion {
+		flex-direction: column;
+	}
+
+	section.conversion > figure:first-child {
+		margin-bottom: 0;
+	}
+
+	section.conversion > div {
+		flex-direction: row-reverse !important;
+		margin-bottom: 0 !important;
+	}
+
+	section.conversion > div::before {
+		content: '⇧' !important;
+	}
+
+	section.conversion > div::after {
+		content: '⇩' !important;
+	}
+
+	section.conversion > figure:last-child {
+		margin-top: 0;
+	}
 }
 
 main {
