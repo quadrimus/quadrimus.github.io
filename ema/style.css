@@ -234,6 +234,10 @@ h2 {
 	color: var(--pink);
 }
 
+h3 {
+	color: var(--orange);
+}
+
 p {
 	text-align: justify;
 }
@@ -257,15 +261,20 @@ ul {
 
 code {
 	background-color: var(--grey-background-color);
-	border: 0.1em solid var(--orange);
 	border-radius: 0.4em;
 	color: var(--text-color);
-	display: block;
+	display: inline-block;
 	font-family: monospace;
 	font-size: 1.4em;
 	line-height: 1.7em;
-	padding: 0.8em;
+	padding: 0 0.2em;
 	white-space: pre-line;
+}
+
+figure > code {
+	border: 0.1em solid var(--orange);
+	display: block;
+	padding: 0.8em;
 }
 
 code > b {
@@ -277,12 +286,12 @@ code > i {
 	font-style: normal;
 }
 
-code:has(+ figcaption) {
+figure > code:has(+ figcaption) {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
-code + figcaption {
+figure > code + figcaption {
 	align-items: flex-start;
 	background-color: var(--background-color);
 	border: 0.1em solid var(--orange);
@@ -293,12 +302,12 @@ code + figcaption {
 	overflow: hidden;
 }
 
-code + figcaption > span {
+figure > code + figcaption > span {
 	display: inline-block;
 	padding: 0.4em;
 }
 
-code + figcaption > a {
+figure > code + figcaption > a {
 	color: var(--text-color);
 	border: 0.1em solid var(--orange);
 	border-right: none;
@@ -311,7 +320,7 @@ code + figcaption > a {
 	width: 4em;
 }
 
-code + figcaption > a:hover {
+figure > code + figcaption > a:hover {
 	background-color: var(--orange);
 	color: var(--text-color);
 }

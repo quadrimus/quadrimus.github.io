@@ -40,6 +40,8 @@
 		<main>
 			<section>
 				<h2>Guide — File Format</h2>
+				<p>EMA file is a text-based format in UTF-8 encoding with <code>.ema</code> extension.</p>
+				<p>Each file starts with header, which is four bytes: <code>{EMA</code> (values 123, 69, 77, 65)</p>
 			</section>
 			<section class="conversion">
 				<figure>
@@ -59,6 +61,48 @@
 					</code>
 					<figcaption>EMA format converted to JSON</figcaption>
 				</figure>
+			</section>
+			<section>
+				<p>File content can be separated to arbitrary numbers of parts,	with each part being one of the following:</p>
+
+				<h3>Text part</h3>
+				<p>
+					All bytes are interpreted as plain text.
+					The only special character is <code>{</code> (U+007B), which has the following meaning:
+				</p>
+				<ul>
+					<li>
+						If there is another <code>{</code> character immediately after <code>{</code>,
+						text part continues and both characters are interpreted as one occurrence of <code>{</code> character.
+					</li>
+					<li>
+						Otherwise, text part ends and content continues as <b>data part</b>.
+						Character <code>{</code> is included to <b>data part</b>.
+					</li>
+				</ul>
+
+				<h3>Data part</h3>
+				<p>
+					All bytes are interpreted as JSON object (see <a href="https://json.org">json.org</a>).
+					After end <code>}</code> character of object content continues as <b>text part</b>.
+				</p>
+				<p>
+					There is also special data part form called <b>command</b> where starting <code>{</code> is followed
+					by letter <code>A</code>-<code>Z</code> or <code>a</code>-<code>z</code> (first command name letter).
+					Spaces between <code>{</code> and command name are allowed and have no meaning.
+					Command name match regular expression:
+				</p>
+				<figure>
+					<code>^[A-Za-z][-0-9A-Za-z]*$</code>
+					<figcaption>Command name regular expression</figcaption>
+				</figure>
+				<p>After command name, there can be optional spaces followed by:</p>
+				<ul>
+					<li>end <code>}</code> character of command</li>
+					<li>JSON array followed by optional spaces and end <code>}</code> character of command</li>
+					<li>JSON object followed by optional spaces and end <code>}</code> character of command</li>
+				</ul>
+				<p>Spaces are all characters in Unicode category <i>Space Separator</i>.</p>
 			</section>
 		</main>
 		<footer>
