@@ -169,9 +169,19 @@ nav {
 @media screen and (max-width: 64em) {
 	header {
 		.menu {
+			background-color: var(--background-color);
 			display: inline-block !important;
 			float: right;
+			position: relative;
+			z-index: 2;
 		}
+	}
+
+	h1 {
+		margin-right: 0;
+		max-width: calc(100vw - 8em);
+		min-width: unset;
+		white-space: nowrap;
 	}
 
 	nav {
