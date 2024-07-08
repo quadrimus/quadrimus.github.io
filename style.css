@@ -239,6 +239,28 @@ nav {
 	}
 }
 
+@media screen and (max-width: 32em) {
+	h1 {
+		margin-top: 0.5em;
+
+		svg.logo {
+			margin-top: 0;
+		}
+
+		& > span {
+			font-size: 1.4em !important;
+			position: relative;
+
+			&:last-child {
+				display: block;
+				left: 2.48em;
+				position: absolute;
+				top: 0.8lh;
+			}
+		}
+	}
+}
+
 main {
 	align-self: center;
 	flex-grow: 1;
