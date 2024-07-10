@@ -240,7 +240,7 @@ nav {
 }
 
 @media screen and (max-width: 32em) {
-	h1 {
+	h1:not(:has(.team)) {
 		margin-top: 0.5em;
 
 		svg.logo {
