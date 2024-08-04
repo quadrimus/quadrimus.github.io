@@ -236,6 +236,14 @@ nav {
 				}
 			}
 		}
+
+		&.text {
+			margin-inline: 0.8em !important;
+
+			& > h2 {
+				margin-block: 0.4em;
+			}
+		}
 	}
 }
 
@@ -486,6 +494,10 @@ section.conversion {
 			content: '⇦';
 		}
 	}
+}
+
+section.text {
+	margin-inline: 0.4em;
 }
 
 div.warning {
