@@ -307,6 +307,14 @@ a {
 ul {
 	list-style-type: disc;
 	padding-left: 1.5em;
+
+	&.list-ellipsis {
+		list-style-type: '… ';
+	}
+
+	&.list-tilda {
+		list-style-type: '~ ';
+	}
 }
 
 code {
@@ -382,17 +390,27 @@ section.blocks {
 	& > div {
 		background-color: var(--grey-background-color);
 		border-radius: 1em;
+		display: flex;
 		flex: 1;
+		flex-direction: column;
 		padding: 1em;
 
 		& > h3 {
 			color: var(--pink);
-			margin: 0 0 0.5em 0;
+			margin: 0;
 			text-align: center;
 		}
 
 		&:nth-child(even) > h3 {
 			color: var(--orange);
+		}
+
+		& > figure {
+			align-items: center;
+			display: flex;
+			margin: auto 0 0 0;
+			min-height: var(--figure-height, auto);
+			justify-content: center;
 		}
 	}
 
