@@ -480,6 +480,12 @@ section.conversion {
 
 section.text {
 	margin-inline: 0.4em;
+
+	ul {
+		li {
+			margin-block: 0.5em;
+		}
+	}
 }
 
 div.warning {
@@ -505,6 +511,17 @@ div.warning {
 		text-align: center;
 		top: 0.3em;
 		width: 1.61em;
+	}
+}
+
+section.font {
+	& > h3 {
+		text-align: center;
+	}
+
+	& > div {
+		display: flex;
+		flex-wrap: wrap;
 	}
 }
 
