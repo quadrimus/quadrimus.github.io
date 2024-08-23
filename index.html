@@ -19,6 +19,9 @@
 				background-color: #000000;
 				color: #404040;
 				font-family: "Quicksand", sans-serif;
+				font-optical-sizing: auto;
+				font-style: normal;
+				font-weight: 400;
 			}
 
 			body {
@@ -132,6 +135,36 @@
 				}
 			}
 
+			body.ig {
+				h1 {
+					& > .team {
+						font-size: 68px;
+						top: 420px;
+					}
+
+					& > .dark, & > .pink {
+						font-size: 170px;
+						width: 430px;
+					}
+				}
+
+				main {
+					& > section {
+						& > a {
+							font-size: 54px;
+						}
+
+						& > p {
+							font-size: 27px;
+						}
+					}
+
+					& > span:last-child {
+						font-size: 27px;
+					}
+				}
+			}
+
 			#logo {
 				height: 50em;
 				left: 0;
@@ -198,6 +231,9 @@
 		</footer>
 		<script>
 			june();
+			if (navigator.userAgent.toLowerCase().includes('instagram')) {
+				document.body.classList.add('ig');
+			}
 		</script>
 	</body>
 </html>

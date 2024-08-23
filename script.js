@@ -96,3 +96,9 @@ function improveCodes() {
 		}
 	});
 }
+
+function ready() {
+	if (navigator.userAgent.toLowerCase().includes('instagram')) {
+		document.body.classList.add('ig');
+	}
+}

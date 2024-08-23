@@ -19,8 +19,8 @@
 	color: var(--text-color);
 	font-family: "Quicksand", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: 400;
 	font-style: normal;
+	font-weight: 400;
 }
 
 body {
@@ -246,6 +246,17 @@ nav {
 				left: 2.48em;
 				position: absolute;
 				top: 0.8lh;
+			}
+		}
+	}
+
+	body.ig {
+		h1 > span {
+			font-size: 19px !important;
+
+			&:last-child {
+				left: 55px;
+				top: 22px;
 			}
 		}
 	}
@@ -544,6 +555,22 @@ footer {
 
 		&:hover {
 			color: var(--text-color);
+		}
+	}
+}
+
+body.ig {
+	h1 > span {
+		font-size: 27px;
+	}
+
+	header {
+		min-height: 0;
+
+		& > .menu {
+			font-size: 32px;
+			line-height: 52px;
+			min-width: 52px;
 		}
 	}
 }
