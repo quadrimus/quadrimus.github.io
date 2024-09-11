@@ -98,7 +98,7 @@ function improveCodes() {
 }
 
 function ready() {
-	if (navigator.userAgent.toLowerCase().includes('instagram')) {
+	if (navigator.userAgent.includes('FBAN') || navigator.userAgent.includes('FBAV') || navigator.userAgent.toLowerCase().includes('instagram')) {
 		document.body.classList.add('ig');
 	}
 }

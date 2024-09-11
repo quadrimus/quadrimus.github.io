@@ -298,7 +298,7 @@
 		</footer>
 		<script>
 			june();
-			if (navigator.userAgent.toLowerCase().includes('instagram')) {
+			if (navigator.userAgent.includes('FBAN') || navigator.userAgent.includes('FBAV') || navigator.userAgent.toLowerCase().includes('instagram')) {
 				document.body.classList.add('ig');
 			}
 			document.getElementById('about-link').addEventListener('click', (event) => {
