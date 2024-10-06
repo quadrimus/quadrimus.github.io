@@ -526,8 +526,31 @@ div.warning {
 }
 
 section.font {
+	border: 0.2em solid var(--grey-background-color);
+	border-radius: 1em;
+	padding-bottom: 1em;
+
 	& > h3 {
+		border-top: 0.15em solid var(--grey-background-color);
+		border-radius: 1em 1em 0 0;
+		font-size: 1.5em;
+		margin: 1em 0 1em 0;
+		padding: 0.4em 0 0 0;
 		text-align: center;
+
+		&:first-child {
+			border-top: none;
+			margin-top: 0;
+		}
+
+		&::after {
+			background: linear-gradient(90deg, var(--background-color) 0%, var(--border-color) 50%, var(--background-color) 100%);
+			content: '';
+			display: block;
+			height: 0.1em;
+			margin: 0.5em auto 0 auto;
+			width: 20em;
+		}
 	}
 
 	& > div {
