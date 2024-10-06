@@ -70,22 +70,32 @@ h1 {
 		path {
 			fill: var(--grey-text-color);
 			stroke: none;
+			transition: fill 1s;
 		}
 	}
 
-	& > span.dark {
+	a {
+		display: inline-block;
+		text-decoration: none;
+	}
+
+	a:hover svg.logo path {
+		fill: var(--text-color);
+	}
+
+	span.dark {
 		color: var(--orange);
 		font-size: 2em;
 		vertical-align: top;
 	}
 
-	& > span.pink {
+	span.pink {
 		color: var(--pink);
 		font-size: 2em;
 		vertical-align: top;
 	}
 
-	& > span {
+	span {
 		color: var(--grey-text-color);
 		font-size: 2em;
 		vertical-align: top;
