@@ -83,18 +83,19 @@ h1 {
 		fill: var(--text-color);
 	}
 
-	span.quadrimus {
-		background: linear-gradient(90deg, var(--orange) 0%, var(--orange) 20%, var(--pink) 80%, var(--pink) 100%);
-		background-clip: text;
-		color: transparent;
-		font-size: 2em;
-		vertical-align: top;
-	}
-
 	span {
 		color: var(--grey-text-color);
-		font-size: 2em;
+		font-family: "Signika", sans-serif;
+		font-size: 2.1em;
+		font-weight: normal;
 		vertical-align: top;
+
+		&.quadrimus {
+			background: linear-gradient(90deg, var(--orange) 0%, var(--orange) 20%, var(--pink) 80%, var(--pink) 100%);
+			background-clip: text;
+			color: transparent;
+			font-weight: bold;
+		}
 	}
 }
 
@@ -286,12 +287,14 @@ main {
 
 h2 {
 	color: var(--pink);
-	font-size: 1.8em;
+	font-family: "Signika", sans-serif;
+	font-size: 2em;
 	text-align: center;
 }
 
 h3 {
 	color: var(--orange);
+	font-family: "Signika", sans-serif;
 	font-size: 1.5em;
 }
 
