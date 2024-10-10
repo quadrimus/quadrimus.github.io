@@ -83,14 +83,10 @@ h1 {
 		fill: var(--text-color);
 	}
 
-	span.dark {
-		color: var(--orange);
-		font-size: 2em;
-		vertical-align: top;
-	}
-
-	span.pink {
-		color: var(--pink);
+	span.quadrimus {
+		background: linear-gradient(90deg, var(--orange) 0%, var(--orange) 20%, var(--pink) 80%, var(--pink) 100%);
+		background-clip: text;
+		color: transparent;
 		font-size: 2em;
 		vertical-align: top;
 	}
