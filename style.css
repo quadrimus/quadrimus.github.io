@@ -91,7 +91,7 @@ h1 {
 		vertical-align: top;
 
 		&.quadrimus {
-			background: linear-gradient(90deg, var(--orange) 0%, var(--orange) 20%, var(--pink) 80%, var(--pink) 100%);
+			background: linear-gradient(90deg, var(--pink) 0%, var(--pink) 20%, var(--orange) 80%, var(--orange) 100%);
 			background-clip: text;
 			color: transparent;
 			font-weight: bold;
