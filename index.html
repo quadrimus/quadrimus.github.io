@@ -175,7 +175,7 @@
 				}
 			}
 
-			body.ig {
+			body.use-px {
 				h1 {
 					& > .team {
 						font-size: 68px;
@@ -310,9 +310,7 @@
 		</footer>
 		<script>
 			june();
-			if (navigator.userAgent.includes('FBAN') || navigator.userAgent.includes('FBAV') || navigator.userAgent.toLowerCase().includes('instagram')) {
-				document.body.classList.add('ig');
-			}
+			/fban|fbav|instagram/i.test(navigator.userAgent) && document.body.classList.add('use-px');
 			document.getElementById('about-link').addEventListener('click', (event) => {
 				event.preventDefault();
 				document.getElementById('about-content').classList.toggle('show');

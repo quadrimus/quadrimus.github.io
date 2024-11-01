@@ -98,7 +98,5 @@ function improveCodes() {
 }
 
 function ready() {
-	if (navigator.userAgent.includes('FBAN') || navigator.userAgent.includes('FBAV') || navigator.userAgent.toLowerCase().includes('instagram')) {
-		document.body.classList.add('ig');
-	}
+	/fban|fbav|instagram/i.test(navigator.userAgent) && document.body.classList.add('use-px');
 }
