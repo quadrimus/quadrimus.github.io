@@ -576,6 +576,7 @@ book-detail > div {
 	grid-template-columns: 14em auto auto min-content;
 	grid-template-rows: 1.7em auto;
 	margin-bottom: 1em;
+	min-height: 14em;
 	padding: 1em;
 
 	& > img {
