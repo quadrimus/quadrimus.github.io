@@ -196,6 +196,12 @@ nav {
 
 	section {
 		&.blocks {
+			align-items: center;
+			flex-direction: column;
+		}
+
+		&.columns {
+			align-items: center;
 			flex-direction: column;
 		}
 
@@ -403,6 +409,7 @@ section.blocks {
 		display: flex;
 		flex: 1;
 		flex-direction: column;
+		min-width: 20em;
 		padding: 1em;
 
 		& > h3 {
@@ -467,6 +474,42 @@ section.blocks {
 		& > p {
 			display: block;
 			margin: 0.5em 0.2em;
+		}
+	}
+}
+
+section.columns {
+	display: flex;
+	justify-content: space-around;
+	margin: 1em 0.4em;
+
+	& > div {
+		flex-basis: 100%;
+		max-width: 27em;
+
+		&.link {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+
+			a {
+				border: 0.1em solid var(--grey-background-color);
+				border-radius: 0.5em;
+				display: block;
+				font-size: 2em;
+				padding: 1em;
+				text-align: center;
+				text-decoration: none;
+				width: fit-content;
+
+				&:hover {
+					background-color: var(--grey-background-color) 50%;
+				}
+			}
+		}
+
+		& > p:first-child {
+			margin-top: 0;
 		}
 	}
 }
