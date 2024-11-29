@@ -720,6 +720,12 @@ footer {
 	}
 }
 
+/*
+h1 .quadrimus {
+	background: linear-gradient(90deg in hsl longer hue, #f00000 0%, #a92471 100%) text;
+}
+*/
+
 body.use-px {
 	h1 span {
 		font-size: 27px;
