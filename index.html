@@ -104,7 +104,12 @@
 
 							&:has(svg) {
 								&:hover {
+									background-color: var(--pink);
 									color: #ffffff;
+
+									&:nth-child(odd) {
+										background-color: var(--orange);
+									}
 
 									& > svg path {
 										fill: #ffffff !important;
