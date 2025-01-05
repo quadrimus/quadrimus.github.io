@@ -5,7 +5,7 @@
   </url>
   <url>
     <loc>https://quadrimus.com/books</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://quadimurs.com/knihy"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://quadrimus.com/knihy"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quadrimus.com/books"/>
   </url>
   <url>
@@ -24,11 +24,8 @@
     <loc>https://quadrimus.com/font/letrascript</loc>
   </url>
   <url>
-    <loc>https://quadrimus.com/games</loc>
-  </url>
-  <url>
     <loc>https://quadrimus.com/knihy</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://quadimurs.com/knihy"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://quadrimus.com/knihy"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quadrimus.com/books"/>
   </url>
 </urlset>
